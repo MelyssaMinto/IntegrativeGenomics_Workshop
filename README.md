@@ -19,7 +19,7 @@ Each cell in our bodies comprises of the same DNA and yet this DNA gives rise to
 
 ## Detailed Schedule
 
-| Day      | Topics                                                                                                   | Resources            |
-|----------|----------------------------------------------------------------------------------------------------------|----------------------|
-| Aug 24th | [Intro to Epigenomics & Gene Regulation, Differential Analysis](intro_epigenomics/IntroToEpigenomics.md) | [slides](), [code]() |
-| Aug 25th | [Methods to map peaks to genes](peak_mapping/Methods_PeakMapping.md)                                     | [slides](), [code]() |
+| Day      | Topics                                                                                                   | 
+|----------|----------------------------------------------------------------------------------------------------------|
+| Sep 1st | [Intro to Epigenomics & Gene Regulation, Differential Analysis](exercises/IntroToEpigenomics.md) | 
+| Sep 2nd | [Methods to map peaks to genes](exercises/Methods_PeakMapping.md)                                     |
