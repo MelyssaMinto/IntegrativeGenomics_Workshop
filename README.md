@@ -2,7 +2,7 @@
 
 ### Melyssa Minto ([melyssa.minto\@duke.edu](mailto:melyssa.minto@duke.edu){.email})
 
-Classes will be August 24th-35th. Location TBA to prospective attendees and will most likely be hybrid. Email [melyssa.minto\@duke.edu](mailto:melyssa.minto@duke.edu){.email} to sign up, receive further updates, and ask questions about the workshop.
+Classes will be Sep 1st-2nd. Location TBA to prospective attendees and will most likely be hybrid. Email [melyssa.minto\@duke.edu](mailto:melyssa.minto@duke.edu){.email} to sign up, receive further updates, and ask questions about the workshop.
 
 ![](https://ars.els-cdn.com/content/image/1-s2.0-S0166223618300559-gr1.jpg)
 
