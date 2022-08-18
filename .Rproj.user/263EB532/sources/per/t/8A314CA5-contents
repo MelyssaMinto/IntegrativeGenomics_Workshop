@@ -1,0 +1,89 @@
+---
+title: "Methods to Map Peak to Genes(Day 2)"
+output: html_notebook
+---
+
+# Methods to Map Peak to Genes(Day 2)
+
+### Learning outcomes
+
+-   You will learn several types of peak to gene mapping methods
+
+# Setting Up the framework
+
+Once you know what peaks change the next step is to tie this data to gene expression or gene regulation. For example if you have a transcription factor peak increase in the promoter of gene_a and that gene_a increases in expression then you can associate that transcription factor with the up regulation of gene_a. Conversely, if that same transcription factor increasing in binding at gene_b and gene_b decreases in expression then that TF can be associated with down-regulation of gene_b.
+
+✎ Assume you have count data from a ChIP-seq of TF peak case and control as well as gene expression values between case and control. What are the steps in identifying which genes the TF regulates between case and control? ✎
+
+> 1.  Differential analysis of the Peak regions to determine where the TF gains binding and loses binding in comparison to the WT samples.
+>
+> 2.  Differential analysis of the gene expression to determine which genes are unregulated and down-regulated in comparison to the WT samples.
+>
+> 3.  Map the peaks to genes. Peaks that change that are mapped to genes that change can be associated with regulation of those genes
+
+## Interpretation framework
+
+✎Fill out this table to interpret peaks that change that are mapped to genes that change✎
+
+|                     |             |           |
+|---------------------|-------------|-----------|
+|                     | Peak Gained | Peak Lost |
+| Gene Up-regulated   |             |           |
+| Gene Down-regulated |             |           |
+
+\\
+
+# Peak mapping methods
+
+## Nearest gene
+
+The naive method in mapping peaks to genes is simply mapping it to its nearest gene. You will know the genomic location of your peaks and you can use the TSS of each gene. Using those coordinates you can map peaks to the nearest gene. Luckily for us, there is a well documented R package that will do this for you.
+
+The `ChIPseeker` package has many functions to work with chromatin data. In this course we will go through how to use the `annotatePeaks()` function in which you pass in an object that holds the peak positions (Chr, Start, Stop), and you specify the genome (mouse, human, fly) and it will output a nearest gene for each peak as well as some information about the peak in relation to the gene.
+
+Before we run the code, let's check out the default options of `annotatePeaks()`
+
+```{r}
+library(ChIPSeeker)
+?annotatePeak()
+```
+
+```{r}
+# get path to peak bed file 
+sample_file = "../bed/file.bed"
+
+# run annotatePeak()
+annot = annotatePeak(sample_file, TxDb=TxDb.Mmusculus.UCSC.mm10.knownGene, tssRegion=c(-1000, 1000), verbose=FALSE)
+```
+
+```{r}
+# plot
+plotAnnoBar(annot)
+```
+
+```{r}
+vennpie(peakAnno)
+```
+
+You can also do this with multiple bed files using the `lapply()` function,
+
+```{r}
+# get path to peak bed files 
+sample_files = c("../results/DiffExp_ZicChIP/P60vP7_DOWN.bed", "../results/DiffExp_ZicChIP/P60vP7_NS.bed", "../results/DiffExp_ZicChIP/P60vP7_UP.bed")
+sample_files <- as.list(sample_files)
+names(sample_files) <- c("P7", "N.S.", "P60")
+
+# run annotatePeak()
+zic_anno = lapply(sample_files, annotatePeak, TxDb=TxDb.Mmusculus.UCSC.mm10.knownGene, tssRegion=c(-1000, 1000), verbose=FALSE)
+
+# plot
+plotAnnoBar(zic_anno)
+```
+
+✎ Brainstorm some questions you can explore with the data with peaks mapped to nearest gene✎
+
+> **1.** What are the distribution of peaks mapped to genes that are expressese? or differentially expressed?
+
+## Correlation
+
+## Using 3D Chromatin Information

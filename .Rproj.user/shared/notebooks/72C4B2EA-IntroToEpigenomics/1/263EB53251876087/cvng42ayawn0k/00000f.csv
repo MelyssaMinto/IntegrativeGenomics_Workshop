@@ -1,0 +1,24 @@
+"0","# install packages"
+"0","# install.packages(""readr"")"
+"0","# install.packages(""dplyr"")"
+"0","# BiocManager::install(""Rsubread"")"
+"0",""
+"0","# load them"
+"0","library(readr)"
+"2","Warning: package ‘readr’ was built under R version 4.1.3"
+"0","library(dplyr)"
+"2","
+Attaching package: ‘dplyr’
+
+"
+"2","The following objects are masked from ‘package:stats’:
+
+    filter, lag
+
+"
+"2","The following objects are masked from ‘package:base’:
+
+    intersect, setdiff, setequal, union
+
+"
+"0","library(Rsubread)"

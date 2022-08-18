@@ -1,0 +1,33 @@
+{
+    "id": "8A314CA5",
+    "path": "~/GitHub/IntegrativeGenomics_Workshop/peak_mapping/Methods_PeakMapping.Rmd",
+    "project_path": "peak_mapping/Methods_PeakMapping.Rmd",
+    "type": "r_markdown",
+    "hash": "3470427818",
+    "contents": "",
+    "dirty": true,
+    "created": 1660152844751.0,
+    "source_on_save": false,
+    "relative_order": 4,
+    "properties": {
+        "tempName": "Untitled1",
+        "chunk_output_type": "inline",
+        "source_window_id": "",
+        "Source": "Source",
+        "cursorPosition": "39,7",
+        "scrollLine": "0",
+        "rmdVisualMode": "true",
+        "rmdVisualWrapConfigured": "true",
+        "docOutlineVisible": "1",
+        "rmdVisualCollapsedChunks": "",
+        "rmdVisualModeLocation": "2:0"
+    },
+    "folds": "",
+    "lastKnownWriteTime": 1660154048,
+    "encoding": "UTF-8",
+    "collab_server": "",
+    "source_window": "",
+    "last_content_update": 1660154050397,
+    "read_only": false,
+    "read_only_alternatives": []
+}
